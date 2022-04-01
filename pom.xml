@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.blockwit</groupId>
+    <artifactId>testrepo</artifactId>
+    <version>2.3.0.0-SNAPSHOT</version>
+    <name>testrepo</name>
+    <description>testrepo</description>
+
+    <packaging>jar</packaging>
+
+    <scm>
+        <developerConnection>scm:git:https://github.com/BlockWit/testrepo</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <project.encoding>UTF-8</project.encoding>
+        <project.build.sourceEncoding>${project.encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${project.encoding}</project.reporting.outputEncoding>
+        <java.version>11</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.scm.id>github-scm-server</project.scm.id>
+    </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>bw-releases</id>
+            <name>maven-releases</name>
+            <url>https://nexus.blockwit.io/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>bw-snapshots</id>
+            <name>maven-snapshots</name>
+            <url>https://nexus.blockwit.io/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>maven-central</id>
+            <name>maven-central</name>
+            <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>bw-releases</id>
+            <name>maven-releases</name>
+            <url>https://nexus.blockwit.io/repository/maven-releases/</url>
+        </repository>
+        <repository>
+            <id>bw-snapshots</id>
+            <name>maven-snapshots</name>
+            <url>https://nexus.blockwit.io/repository/maven-snapshots/</url>
+        </repository>
+    </repositories>
+
+
+    <dependencies>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <show>private</show>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
