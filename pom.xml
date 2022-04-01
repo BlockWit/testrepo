@@ -4,7 +4,7 @@
 
     <groupId>com.blockwit</groupId>
     <artifactId>testrepo</artifactId>
-    <version>2.3.0.0-SNAPSHOT</version>
+    <version>2.3.0.0</version>
     <name>testrepo</name>
     <description>testrepo</description>
 
@@ -12,7 +12,7 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/BlockWit/testrepo</developerConnection>
-        <tag>HEAD</tag>
+        <tag>testrepo-2.3.0.0</tag>
     </scm>
 
     <properties>
